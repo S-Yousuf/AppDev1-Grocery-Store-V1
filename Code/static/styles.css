@@ -1,0 +1,55 @@
+.blank {
+    align-items: center;
+    height: 100px;
+}
+#btnm {
+    margin-left: 100px;
+    margin-top: 10px;
+}
+#userlogin {
+    margin-left: 570px;
+
+}
+#btn {
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 10px;  
+}
+#btn2 {
+    margin-top: 10px;
+}
+.main {
+    align-items: center;
+    margin-left: 520px;
+    margin-top: 10px;
+    width: 300px;
+    height: 250px;
+    padding-left: 20px;
+   border-style: solid;
+   border-color: black
+}
+.main2 {
+    align-items: center;
+    margin-left: 520px;
+    margin-top: 10px;
+    width: 300px;
+    height: 220px;
+    padding-left: 10px;
+    border-style: solid;
+    border-color: black
+}    
+.header {
+        align-items: center;
+        margin-left: 530px;
+}
+#btn btn-outline-success me-2 {
+    margin-left: 1000px;
+}
+
+#uname {
+    margin-top: 10px;
+}
+
+#psw {
+    margin-top: 10px;
+}

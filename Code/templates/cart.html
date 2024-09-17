@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        h6{
+            margin-left: 20px;
+        }
+        h3{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .checkout {
+            padding-top: 20px;
+            margin-left: 1250px;
+        }
+
+    </style>
+    <nav class="navbar bg-body-tertiary" data-bs-theme= "dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/user_dashboard">
+               Home
+            </a>
+        </div>
+    </nav>
+</head>
+<body>
+
+    <div>
+    <h3>Cart</h3>
+    <table class="table">
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price/Unit</th>
+            <th>Total</th>
+        </tr>
+        {% for item in cart %}
+        <tr>
+            <td>{{ products[item.p_id - 1].p_name }}</td>
+            <td>{{ item.quantity }} <span> </span>{{ products[item.p_id - 1].unit }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.quantity * item.price }}</td>
+            <td><a href="/review/{{ item.p_id }}" class="btn btn-secondary btn-sm">Review</a></td>
+        </tr>            
+        {% endfor %}     
+    </table>
+    <h6>Grand Total: {{ get_grand_total(u_id) }} </h6>
+    </div>
+
+    <div class="checkout">
+        <form method="POST">
+        <button type="submit" class="btn btn-outline-dark">Checkout</button>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js">
+</body>
+</html>
